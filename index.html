@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es" ng-app="twittsApp">
+<head>
+  <meta charset="utf-8">
+	<title> Twitter wall </title>
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+  <script type="text/javascript" src="node_modules/socket.io-client/socket.io.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#hashtag').focus();
+    });
+  </script>
+</head>
+<body style="background-image: url('css/weather.png');" ng-controller="TwittsController">
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+  	<input type="text" id="hashtag" placeholder="#Hashtag" ng-model="hashtag" size="20" ng-keyup="hashtagOnKeyUp($event)">
+  </div>
+  <div class="col-md-4"></div>
+</div>
+
+<div class="row" ng-repeat="twitt in twitts">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="media">
+          <div class="media-left">
+            <img class="media-object" ng-src="{{twitt.user.profile_image_url}}" alt="foto">
+          </div>
+          <div class="media-body">
+  		      <h4 class="media-heading">{{ twitt.user.name }}</h4> <h5 class="media-heading" style="color: grey;"> @{{ twitt.user.screen_name }} </h5>
+            {{ twitt.text }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4"></div>
+</div>
+
+</body>
+</html>

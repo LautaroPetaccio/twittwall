@@ -1,0 +1,11 @@
+#hashtag {
+  text-align: center;
+  border: none;
+  background-color:rgba(0,0,0,0);
+  background-color: transparent;
+  width: 100%;
+  font-size: 50px;
+}
+#hashtag:focus {
+    outline:none;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "sdc_twitter",
+  "version": "1.0.0",
+  "description": "Muestra los tweets que contengan un hashtag determinado",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lautaro Petaccio",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "<2.0",
+    "bootstrap": "^3.3.6",
+    "jquery": "<3.0.0",
+    "opener": "^1.4.1",
+    "socket.io": "^1.4.6",
+    "twitter": "^1.3.0"
+  }
+}
