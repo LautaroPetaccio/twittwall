@@ -9,8 +9,8 @@ The project consists in a server that does the following:
 And a client coded with AngularJS that receives the twitts using Socket.io and shows them.
 
 ### Installation
-npm intall
+- Execute: *npm install*
 
 ### Usage
-- Execute node index.js
+- Execute: *node index.js*
 - In the new browser window opened, write the hashtag or keyword to search in twitter stream for.
